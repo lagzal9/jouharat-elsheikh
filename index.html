@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جوهرة الشيخ | أصالة الخياطة المغربية</title>
+    <!-- خط Tajawal من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a2b3c; /* الأزرق الداكن */
+            --accent-color: #d4af37;  /* الذهبي */
+            --bg-light: #f8f9fa;
+            --text-dark: #222222;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        /* ----- Header ----- */
+        header {
+            background-color: var(--primary-color);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* يمكنك وضع رابط صورتك هنا */
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            border: 2px solid var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-text {
+            color: var(--accent-color);
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* ----- Hero Section ----- */
+        .hero {
+            background: linear-gradient(rgba(26, 43, 60, 0.85), rgba(26, 43, 60, 0.85)), url('https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #b5932a;
+            color: var(--white);
+        }
+
+        /* ----- Features ----- */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            background-color: var(--white);
+            padding: 30px 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-box {
+            text-align: center;
+            max-width: 200px;
+        }
+
+        .feature-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        /* ----- Products Section ----- */
+        .products {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 30px;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+            text-align: right;
+        }
+
+        .product-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .product-price {
+            color: var(--accent-color);
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ----- Footer ----- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            border-top: 3px solid var(--accent-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 10px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-icon">💎</div>
+            <div class="logo-text">جوهرة الشيخ</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#products">الجلابيب</a></li>
+                <li><a href="#products">القفاطين</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>جوهرة الشيخ - أصالة الخياطة المغربية</h1>
+        <p>تشكيلة راقية من الجلابيب والقفاطين المغربية مخدومة بدقة المعلم وبأفخر الأقمشة.</p>
+        <a href="#products" class="btn-primary">اكتشفي التشكيلة</a>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="feature-box">
+            <h3>🧵 خياطة رفيعة</h3>
+            <p>إتقان ودقة في الفصالة والخياطة.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🚚 توصيل سريع</h3>
+            <p>توصيل لجميع المدن المغربية.</p>
+        </div>
+        <div class="feature-box">
+            <h3>💳 دفع عند الاستلام</h3>
+            <p>لا تدفع حتى تستلم وتتأكد.</p>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <h2 class="section-title">أحدث التصاميم</h2>
+        <div class="product-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=500&q=80" alt="جلابة" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">جلابة مليفة بخدمة المعلم</h3>
+                    <div class="product-price">450 د.م.</div>
+                    <a href="https://wa.me/212600000000?text=أريد%20طلب%20جلابة%20مليفة" class="btn-whatsapp" target="_blank">طلب عبر الواتساب 💬</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=500&q=80" alt="قفطان" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">قفطان ملكي بالسفيفة والعقاد</h3>
+                    <div class="product-price">850 د.م.</div>
+                    <a href="https://wa.me/212606306243?text=أريد%20طلب%20قفطان%20ملكي" class="btn-whatsapp" target="_blank">طلب عبر الواتساب 💬</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=500&q=80" alt="جلابة رندا" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-title">جلابة عصريـة بالطرز والرندا</h3>
+                    <div class="product-price">600 د.م.</div>
+                    <a href="https://wa.me/212600000000?text=أريد%20طلب%20جلابة%20عصرية" class="btn-whatsapp" target="_blank">طلب عبر الواتساب 💬</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>جميع الحقوق محفوظة © 2026 - **جوهرة الشيخ**</p>
+        <p style="margin-top: 10px; color: var(--accent-color);">للتواصل المباشر: 0600000000</p>
+    </footer>
+
+</body>
+  </html>
+  
